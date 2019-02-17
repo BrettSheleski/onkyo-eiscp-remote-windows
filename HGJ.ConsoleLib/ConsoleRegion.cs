@@ -26,10 +26,6 @@ namespace HGJ.ConsoleLib {
 
     internal List<string> Content { get; set; }
     public event ContentUpdated OnContentUpdated;
-    public event ArrowPressed OnArrowDown;
-    public event ArrowPressed OnArrowUp;
-    public event ArrowPressed OnArrowLeft;
-    public event ArrowPressed OnArrowRight;
 
     public void WriteContent(string message, bool append = false) {
       if (!append)

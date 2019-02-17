@@ -14,13 +14,14 @@ namespace HGJ.ConsoleLib {
     public event AddEventHandler AddEvent;
     public event RemoveEventHandler RemoveEvent;
 
-    public void Add(TKey pKey, TValue pValue) {
+        
+    public new void Add(TKey pKey, TValue pValue) {
       if (AddEvent != null)
         AddEvent(new AddEventArgs(pKey, pValue));
       base.Add(pKey, pValue);
     }
 
-    public void Remove(TKey pKey) {
+    public new void Remove(TKey pKey) {
       if (RemoveEvent != null)
         RemoveEvent(new RemoveEventArgs(pKey));
       base.Remove(pKey);

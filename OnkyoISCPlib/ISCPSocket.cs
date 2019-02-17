@@ -81,7 +81,7 @@ namespace OnkyoISCPlib {
           _sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp) { ReceiveTimeout = 1000 };
         if (!_sock.Connected)
           _sock.Connect(DeviceIp, DevicePort);
-      } catch (Exception x) {
+      } catch (Exception) {
         
       }
     }
